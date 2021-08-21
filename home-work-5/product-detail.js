@@ -6,8 +6,6 @@ function subTotal() {
 
     const totalPrice = document.getElementById('total-price');
     const setTotalAmount = document.getElementById('totalAmount');
-    
-
 
     totalPriceValue = bestPrice + memoryPrice + stroagePrice + deliveryCharge;
 
