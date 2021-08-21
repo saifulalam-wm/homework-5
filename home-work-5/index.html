@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+   
+    <title>Apple Mac Book</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/home-work-5/Apple-logo.png" alt="">
+            </div>
+            <menu>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </menu>
+        </nav>
+    </header>
+    <section>
+        <div class="product">
+            <div class="container">
+                <div class="product-image">
+                    <img src="/home-work-5/mac.png" alt="">
+                </div>
+            </div>
+            <div class="container">
+                <div class="product-detail">
+                    <h1>Customize your Blue 24-inch iMac with Apple M1 chip</h1>
+                    <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and
+                        16-core Neural Engine.8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic
+                        Mouse
+                        Magic Keyboard - US English</p>
+                </div>
+                <div class="product-button">
+                    <div class="product-memory">
+                        <h5>Memory</h5>
+                        <button onclick="tableValueEGB()" id="memory-8gb">8GB Undefine Memory</button>
+                        <button onclick="tableValueSGB()" id="memory-16gb">16GB Undefine Memory</button>
+                    </div>
+                    <div class="stroage">
+                        <h5>Stroage</h5>
+                        <button onclick="tableValueTFS()" id="stroage-256">256GB SSD Stroage</button>
+                        <button onclick="tableValueFOT()" id="stroage-512">512GB SSD Stroage</button>
+                        <button onclick="tableValueOTB()" id="stroage-1tb">1TB SSD Stroage</button>
+                    </div>
+                    <div class="product-del-charge">
+                        <h5>Delivery Charge</h5>
+                        <button onclick="tableValueFD()" id="del-free">Friday,Aug 25 FREE Prime Delivery</button>
+                        <button onclick="tableValueDD()"  id="del-charge">Friday,Aug 21 Delivery Charge $20</button>
+                    </div>
+                </div>
+                <div class="product-price">
+                    <table>
+                        <tr>
+                            <td>Best Price</td>
+                            <td>$ <span id="best-price">1299</span></td>
+                        </tr>
+                        <tr>
+                            <td>Extra Memory cost</td>
+                            <td>$ <span id="memory">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Extra Stroage cost</td>
+                            <td>$ <span id="stroage">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Charge</td>
+                            <td>$ <span id="delivery-charge">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total Price</td>
+                            <td >$ <span id="total-price">0</span></td>
+                        </tr>
+                    </table>
+                    <div class="promo-code">
+                        <input id="inputPromo" type="text">
+                        <button id="applyPromo">Apply</button>
+                        <p id="invalidValue">**Your code is invalid</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="total-amount">
+            <h3>Total Price $ <Span id="totalAmount">1299</Span></h3>
+        </div>
+    </section>
+
+<script src="/product-detail.js"></script>
+</body>
+
+</html>
