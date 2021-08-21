@@ -48,7 +48,7 @@ nav ul li a {
 
 .product {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr;
     width: 100%;
 }
