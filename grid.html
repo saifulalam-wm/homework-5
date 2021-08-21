@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url(bg.png);
+        }
+
+        .my-sec {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-form{
+            background-color: navy;
+            width: 300px;
+            height: 400px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .exm > :nth-child(n) {
+            display: block;
+        }
+
+        .exm label{
+            margin: auto;
+            color: #fff;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .exm input{
+            margin: auto;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .exm h1{
+            color: #fff;
+            text-align: center;
+            margin: 10px 0 ;
+            background-color: orange;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        .exm button{
+            width: 30%;
+            padding: 10px;
+            background-color: orange;
+            color: #fff;
+            font-weight: bold;
+        }
+        .exm img{
+            width: 100%;
+            margin: 20px 0;
+        }
+        .exm small{
+            color: #fff;
+            margin: auto;
+        }
+          
+    </style>
+</head>
+
+<body>
+    
+    <div class="my-sec">
+        
+        <div id="login-box" class="login-form">
+            <div class="exm">
+                <img src="/The_Long_Dark_logo.png" alt="">
+                <h1>log in</h1>
+                <small id="login-mess">**Plase enter ID & Password**</small>
+                <label for="input">User Name</label>
+                <input id="user-id" type="text">
+                <label for="password">Your Password</label>
+                <input id="user-pass" type="password">
+                <br>
+                <button id="submit-btn" type="submit">Submit</button>
+    
+    
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script>
+    document.getElementById('submit-btn').addEventListener('click',function(){
+        const userIdText = document.getElementById('user-id');
+        const userId = userIdText.value;
+
+        const userPassText = document.getElementById('user-pass');
+        const userPass = userPassText.value;
+
+        if(userId == "saiful@gmail.com" && userPass == "asdf1234" ){
+            window.location.href = "validation.html";
+        }else{
+            const disMess = document.getElementById('login-mess');
+
+            
+            const showMess = disMess.innerText;
+            
+            disMess.innerText = 'Invalid User';
+            document.getElementById('login-box').style.backgroundColor = 'red';
+
+        };
+
+        userIdText.value = "";
+
+    })
+
+</script>
+</body>
+
+</html>

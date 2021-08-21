@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+</head>
+
+<body>
+    <h1>Banking Site</h1>
+
+    <input id="inputPass" type="password">
+    <button id="submitBtn">submit</button>
+
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            const userEmail = document.getElementById('inputPass');
+            const showEmail = userEmail.value;
+            if (showEmail == "saiful@gmail.com") {
+                window.location.href = "login.html"
+            }
+        })
+
+        const task = "Practice Makes a person perfect";
+
+        const index = task.toLowerCase().indexOf("M");
+        console.log(index);
+
+
+        const str1 = 'Bangladesh is a beautiful country.';
+
+        console.log(str1.endsWith("country"));
+
+        const str= 'I love coding more than eating.';
+        const a = str.splice(2,6);
+        console.log(a);
+
+        const names =["rafiq", "jabbar","bakkar", "habib", "dalim"];
+
+        const b = names.reverse();
+        console.log(b);
+
+        // let i==0; i<10;i++){}
+
+    </script>
+
+</body>
+
+</html>

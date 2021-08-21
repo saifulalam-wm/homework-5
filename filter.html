@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background-color: #343a40;
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+
+        }
+
+        table td {
+            text-align: left;
+            padding: 5px;
+
+        }
+
+        table tr:nth-child(even) {
+            background-color: #e9ecef;
+
+        }
+
+        table td:nth-last-child(1) {
+            /* background-color: rgb(28, 107, 187); */
+            text-align: right;
+
+        }
+
+        table td:nth-child(2) {
+            /* background-color: rgb(28, 107, 187); */
+            text-align: center;
+
+        }
+        input{
+            width: 50%;
+            padding: 10px;
+        }
+        .search-box{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-box">
+        <input id="myInput" onkeyup="searchFun()" placeholder="Type the company name...." type="text">
+    </div>
+    <div id="my-Table" class="table-info">
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        const searchFun = () =>{ 
+          let filter =  document.getElementById('myInput').value.toUpperCase();
+
+          let myTable = document.getElementById('my-Table');
+
+          let tr = myTable.getElementsByTagName('tr');
+
+          for (i = 0; i < tr.length; i++){
+              let td = tr[i].getElementsByTagName('td')[0];
+              if(td){
+                  let textValue = td.textContent || td.innerHTML;
+                  if(textValue.toUpperCase().indexOf(filter) > -1){
+                      tr[i].style.display = "";
+                  }else {
+                      tr[i].style.display = 'none';
+                  }
+              }
+          }
+
+
+        }
+        console.log(searchFun);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

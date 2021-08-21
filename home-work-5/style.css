@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+}
+
+/* Header section */
+
+.logo img {
+    width: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    width: 100%;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul li:hover {
+    border-right: 3px solid red;
+    transition: .3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #dac6c6;
+}
+
+/* Product section */
+
+/* Create Gril template*/
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    width: 100%;
+}
+
+/* product Image placeing*/
+.product-image {
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+    width: 100%;
+}
+
+.product-image img {
+    width: 50%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 320px) {
+    .product-image img {
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .product-image img {
+        width: 90%;
+
+    }
+}
+
+/* Product button customize*/
+.product-detail,
+.product-button,
+.product-cost {
+    margin: 10px 0;
+}
+
+.product-button :nth-child(n) {
+    margin-bottom: 10px;
+}
+
+.product-button button {
+    padding: 5px;
+}
+
+.product-button button:hover {
+    border: 2px solid #555;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.product-detail h1,
+p {
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Cost customize Section*/
+.product-price table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.product-price td {
+    border-bottom: 1px solid rgb(206, 206, 206);
+    padding: 5px 0;
+}
+
+.product-price table tr:nth-last-child(2) {
+    border-bottom: 3px #555 solid;
+}
+
+.product-price table td:nth-last-child(1) {
+    text-align: right;
+}
+
+.total-amount {
+    border-top: 2px solid #555;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.total-amount h3 {
+    padding: 10px 0;
+}
+
+/* Promo Code*/
+.promo-code {
+    margin-top: 10px;
+}
+
+.promo-code input {
+    width: 50%;
+    padding: 5px 0;
+}
+
+.promo-code button {
+    width: 20%;
+    padding: 7px 0;
+    background-color: rgba(216, 49, 49, 0.87);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.promo-code p {
+    display: none;
+}
